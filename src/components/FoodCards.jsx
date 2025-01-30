@@ -3,14 +3,17 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { Star } from "lucide-react"
-import Container from "./Container"
-
+import { Star } from "lucide-react";
+import Container from "./Container";
+import P1 from "../assets/home-images/product1.png";
+import P2 from "../assets/home-images/product2.png";
+import P3 from "../assets/home-images/product3.png";
+import Image from "next/image";
 const foodItems = [
   {
     id: 1,
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20164628-jNw7Fi0DVszmD2ulhZUWi8QMdU4hSy.png",
+     P1,
     isHot: true,
     title: "Special Set",
     rating: 4.1,
@@ -22,7 +25,7 @@ const foodItems = [
   {
     id: 2,
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20164628-jNw7Fi0DVszmD2ulhZUWi8QMdU4hSy.png",
+      P2,
     isHot: false,
     title: "Special Set",
     rating: 4.1,
@@ -34,7 +37,7 @@ const foodItems = [
   {
     id: 3,
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20164628-jNw7Fi0DVszmD2ulhZUWi8QMdU4hSy.png",
+     P3,
     isHot: false,
     title: "Special Set",
     rating: 4.1,
@@ -55,8 +58,8 @@ export default function FoodCards() {
               <Card className="bg-black text-white">
                 <CardContent className="p-6">
                   <div className="relative">
-                    <img
-                      src={item.image || "/placeholder.svg"}
+                    <Image
+                      src={item.image }
                       alt="Food bowl"
                       className="w-32 h-32 mx-auto rounded-full"
                     />
